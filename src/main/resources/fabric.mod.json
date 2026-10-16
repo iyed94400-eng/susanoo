@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "susanoo",
+  "version": "${version}",
+  "name": "Susanoo",
+  "description": "Invoque le Susanoo noir : 3 formes, epee, attaques devastatrices.",
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.susano.SusanooMod"],
+    "client": ["com.susano.client.SusanooClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}
