@@ -234,7 +234,7 @@ public class SusanooEntity extends PathAwareEntity {
             nz = MathHelper.lerp(0.35, getZ(), tz);
         }
         float target = (locked && attackTicks > 0) ? lockYaw : o.getYaw();
-        float yaw = MathHelper.stepAngleTowards(getYaw(), target, 25f);
+        float yaw = getYaw() + MathHelper.clamp(MathHelper.wrapDegrees(target - getYaw()), -25f, 25f);
         refreshPositionAndAngles(nx, ny, nz, yaw, 0);
         setBodyYaw(yaw);
         setHeadYaw(yaw);
